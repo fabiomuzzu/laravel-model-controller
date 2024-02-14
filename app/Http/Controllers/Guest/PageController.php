@@ -13,4 +13,11 @@ class PageController extends Controller
 
         return view('home', compact('movies'));
     }
+
+    public function show($id){
+        $movies = Movie::all();
+        $movie = $movies->find($id);
+
+        return view('movies.show', compact('movie'));
+    }
 }

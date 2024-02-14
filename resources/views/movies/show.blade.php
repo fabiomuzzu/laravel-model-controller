@@ -20,10 +20,8 @@
         <div class="row">
             <div class="col-12">
                 <h1 class="text-center py-5 ">I nostri film</h1>
-            </div>
-            @foreach ($movies as $movie)
-                <div class="col-3 my-3">
-                    <section class="articles">
+                <div class="col-12 d-flex justify-content-center">
+                    <section>
                         <article>
                             <div class="article-wrapper">
                                 <div class="article-body">
@@ -32,12 +30,16 @@
                                     <p class="fw-bold">Nazionalità: <span class="fw-normal text-capitalize">{{$movie->nationality}}</span></p>
                                     <p class="fw-bold">Data di uscita: <span class="fw-normal">{{$movie->date}}</span></p>
                                     <p class="fw-bold">Voto: <span class="fw-normal">{{$movie->vote}}</span></p>
+                                    <p class="fw-bold">Descrizione: <span class="fw-normal">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsam, laudantium facere delectus odit enim ea ut, quod consequuntur consequatur, nemo ratione laborum et! Odit, autem fugit rem suscipit hic eligendi.</span></p>
                                 </div>
                             </div>
                         </article>
                     </section>
                 </div>
-            @endforeach
+                <div class="col-12 d-flex justify-content-center">
+                    <a class="btn btn-light my-3" href="{{route('homepage')}}">Torna Indietro</a>
+                </div>
+            </div>
         </div>    
     </div>    
 </body>
