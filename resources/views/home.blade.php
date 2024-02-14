@@ -16,9 +16,18 @@
 </head>
 
 <body>
-
-    
-
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h2 class="text-center py-5 ">I nostri film</h2>
+            </div>
+            @foreach ($movies as $movie)
+                <div class="col-3">
+                    <span>{{$movie->title}}</span>
+                </div>
+            @endforeach
+        </div>    
+    </div>    
 </body>
 
 </html>
