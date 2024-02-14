@@ -19,11 +19,23 @@
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <h2 class="text-center py-5 ">I nostri film</h2>
+                <h1 class="text-center py-5 ">I nostri film</h1>
             </div>
             @foreach ($movies as $movie)
-                <div class="col-3">
-                    <span>{{$movie->title}}</span>
+                <div class="col-3 my-3">
+                    <section class="articles">
+                        <article>
+                            <div class="article-wrapper">
+                                <div class="article-body">
+                                    <h2>{{$movie->title}}</h2>
+                                    <p class="fw-bold">Titolo originale: <span class="fw-normal">{{$movie->original_title}}</span></p>
+                                    <p class="fw-bold">Nazionalità: <span class="fw-normal text-capitalize">{{$movie->nationality}}</span></p>
+                                    <p class="fw-bold">Data di uscita: <span class="fw-normal">{{$movie->date}}</span></p>
+                                    <p class="fw-bold">Voto: <span class="fw-normal">{{$movie->vote}}</span></p>
+                                </div>
+                            </div>
+                        </article>
+                    </section>
                 </div>
             @endforeach
         </div>    
